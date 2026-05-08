@@ -254,7 +254,7 @@
 
             <!-- Book 4 -->
             <div class="book-card">
-                <img src="<c:url value='/resources/images/circe.jpeg' />" alt="Circe" class="book-cover">
+                <img src="<c:url value='/resources/images/miller.jpeg' />" alt="Circe" class="book-cover">
                 <a href="product?id=miller" style="text-decoration:none; color:inherit;"><h3>Circe</h3></a>
                 <p>Madeline Miller</p>
                 <span class="price">$35.00</span>
