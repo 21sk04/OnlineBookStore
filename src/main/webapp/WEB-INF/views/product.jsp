@@ -143,9 +143,12 @@
 
     <div class="product-container">
         <!-- Image Area -->
-        <div class="product-image">
-            Book Cover High-Res
-        </div>
+       <!-- Image Area -->
+<div class="product-image">
+    <img src="<c:url value='/resources/images/${id}.jpeg' />" 
+         alt="${title}" 
+         style="max-width: 100%; height: auto; border-radius: 8px;">
+</div>
 
         <!-- ... existing code (Image area) ... -->
 
