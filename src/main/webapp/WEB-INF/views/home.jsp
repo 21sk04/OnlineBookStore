@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -177,6 +178,13 @@
             font-weight: bold;
             transition: 0.3s;
         }
+        .book-cover{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
 
         .add-btn:hover {
             background: #2980b9;
@@ -201,7 +209,7 @@
         <div class="book-grid">
             <!-- Book 1 -->
             <div class="book-card">
-                <div class="book-cover-placeholder">COVER ART</div>
+                <img src="<c:url value='/resources/images/midnight.jpeg' />" class="book-cover">
                 <a href="product?id=midnight" style="text-decoration:none; color:inherit;"><h3>The Midnight Library</h3></a>
                 <p>Matt Haig</p>
                 <span class="price">$22.00</span>
@@ -216,7 +224,7 @@
 
             <!-- Book 2 -->
             <div class="book-card">
-                <div class="book-cover-placeholder">COVER ART</div>
+                <img src="<c:url value='/resources/images/dune.jpeg' />" class="book-cover">
                 <a href="product?id=dune" style="text-decoration:none; color:inherit;"><h3>Dune</h3></a>
                 <p>Frank Herbert</p>
                 <span class="price">$19.99</span>
@@ -231,7 +239,7 @@
 
             <!-- Book 3 -->
             <div class="book-card">
-                <div class="book-cover-placeholder">COVER ART</div>
+                <img src="<c:url value='/resources/images/hailmary.jpeg' />" alt="Project Hail Mary" class="book-cover">
                 <a href="product?id=hailmary" style="text-decoration:none; color:inherit;"><h3>Project Hail Mary</h3></a>
                 <p>Andy Weir</p>
                 <span class="price">$25.50</span>
@@ -246,7 +254,7 @@
 
             <!-- Book 4 -->
             <div class="book-card">
-                <div class="book-cover-placeholder">COVER ART</div>
+                <img src="<c:url value='/resources/images/circe.jpeg' />" alt="Circe" class="book-cover">
                 <a href="product?id=miller" style="text-decoration:none; color:inherit;"><h3>Circe</h3></a>
                 <p>Madeline Miller</p>
                 <span class="price">$35.00</span>
