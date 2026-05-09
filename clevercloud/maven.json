@@ -1,9 +1,5 @@
 {
-  "build": {
-    "type": "maven",
-    "goal": "package -DskipTests"
-  },
   "deploy": {
-    "warName": "OnlineBookStore"
+    "goal": "package -DskipTests"
   }
 }
