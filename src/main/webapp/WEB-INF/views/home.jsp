@@ -178,12 +178,13 @@
             font-weight: bold;
             transition: 0.3s;
         }
-        .book-cover{
+       .book-cover {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 200px;        /* reduce from 300px */
+    object-fit: contain;  /* change cover → contain, no stretching */
     border-radius: 10px;
     margin-bottom: 10px;
+    background: #f4f4f4;  /* fills empty space around image */
 }
 
         .add-btn:hover {

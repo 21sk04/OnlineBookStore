@@ -199,9 +199,5 @@ public class MainController {
         return "about"; 
     }
     
-    @GetMapping("/logout")
-    public String logout(HttpSession session) {
-        session.invalidate(); // This clears all session data (user, cart, etc.)
-        return "redirect:/login"; // Sends them back to the login page
-    }
+   
 }

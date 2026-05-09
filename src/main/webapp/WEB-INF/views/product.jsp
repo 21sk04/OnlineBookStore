@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
-   
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,17 +46,19 @@
 
         /* Left: Book Image */
         .product-image {
-            flex: 1;
-            background: #ecf0f1;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            font-size: 1.5rem;
-            color: #95a5a6;
-            border: 1px solid #ddd;
-        }
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;        /* ADD THIS */
+    border: 1px solid #ddd;
+}
+.product-image img {
+    width: 100%;
+    height: 400px;        /* reduce from 500px */
+    object-fit: contain;  /* change cover → contain */
+    border-radius: 8px;
+    display: block;
+    background: #f4f4f4;
+}
 
         /* Right: Book Details */
         .product-details {
@@ -145,9 +147,8 @@
         <!-- Image Area -->
        <!-- Image Area -->
 <div class="product-image">
-    <img src="<c:url value='/resources/images/${id}.jpeg' />" 
-         alt="${title}" 
-         style="max-width: 100%; height: auto; border-radius: 8px;">
+    <img src="${pageContext.request.contextPath}/resources/images/${id}.jpeg" 
+         alt="${title}">
 </div>
 
         <!-- ... existing code (Image area) ... -->
