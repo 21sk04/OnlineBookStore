@@ -1,5 +1,0 @@
-{
-  "deploy": {
-    "goal": "tomcat7:run -DskipTests"
-  }
-}
